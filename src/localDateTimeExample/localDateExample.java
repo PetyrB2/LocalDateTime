@@ -2,6 +2,7 @@ package localDateTimeExample;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Calendar;
 import java.util.Date;
 
 public class localDateExample {
@@ -45,9 +46,18 @@ public class localDateExample {
 		// =============
 		System.out.println("\n------------------------------\n");
 		System.out.println("\n------- Date Before Java 8 -------\n");
+		
 		Date myCurrentDate = new Date();
+		
 		System.out.println("Date before Java 8: \n\t" + myCurrentDate);
 
+		Calendar myCalendar = Calendar.getInstance();
+		
+		myCalendar.set(1901, Calendar.DECEMBER, 3);
+		
+		Date myBirthday = myCalendar.getTime();
+		
+		System.out.println("My Birthday prior to Java 8 :\n " + myBirthday);
+	
 	}
-
 }
